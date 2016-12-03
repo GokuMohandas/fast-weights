@@ -4,3 +4,6 @@ Using Fast Weights to Attend to the Recent Past
 Jimmy Ba, Geoffrey Hinton, Volodymyr Mnih, Joel Z. Leibo, Catalin Ionescu
 NIPS 2016, https://arxiv.org/abs/1610.06258
 ```
+
+### Author
+Goku Mohandas (gokumd@gmail.com)
