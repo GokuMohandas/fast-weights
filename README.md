@@ -44,6 +44,8 @@ Notice the last two terms when computing the inner loops next hidden vector. Thi
 
 We do not use this method in our basic implementation because I wanted to explicitly show what the fast weights matrix looks like and having this "memory augmented" view does not really inhibit using minibatches (as you can see). But the problem an explicit fast weights matrix can create is the space issue, so using this efficient implementation will really help us out there.
 
+Note that this 'efficient implementation' will be costly if our sequence length is greater than the hidden state dimensionality. The computations will scale quadratically now because since we need to attend to all previous hidden states with the current inner loop's hidden representation.
+
 ### Execution
 
 - To see the advantage behind the fast weights, Ba et. al. used a very simple toy task.
