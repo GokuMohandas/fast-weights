@@ -40,7 +40,7 @@ How do we store memories? We don't store memories by keeping track of the exact 
 
 ![eq3](images/eq3.png)
 
-Notice the last two terms when computing the inner loops next hidden vector. This is just the scalar product of the earlier hidden state vector, h(? ), and the current hidden state vector, hs(t+ 1) in the inner loop. So you can think of each iteration as attending to the past hidden vectors in proportion to the similarity with the current inner loop hidden vector. 
+Notice the last two terms when computing the inner loops next hidden vector. This is just the scalar product of the earlier hidden state vector, h(\tau ), and the current hidden state vector, hs(t+ 1) in the inner loop. So you can think of each iteration as attending to the past hidden vectors in proportion to the similarity with the current inner loop hidden vector. 
 
 ### Execution
 
@@ -79,6 +79,8 @@ python train.py plot
 ### Extensions
 
 - I will be releasing my code comparing fast weights with an attention interface for language related sequence to sequence tasks. 
+
+- It will also be interesting to compare the computational demands of fast weights compared to LSTM/GRUs and see which one is better for test time.
 
 ### Citations
 
