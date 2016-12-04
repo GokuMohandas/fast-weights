@@ -26,7 +26,7 @@ How do we store memories? We don't store memories by keeping track of the exact 
 
 - For each time step, the same A(t) is used for all the inputs and for all S steps of the "inner loop". This inner loop is transforming the previous hidden state h(t) into the next output hidden state h(t+1). For our toy task, S=1 but for more complicated tasks where more associate learning is required, we need to increase S.
 
-![diagram.png](images/diagram.png)
+![diagram.png](images/diagram1.png)
 
 ### Execution
 
