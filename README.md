@@ -42,6 +42,8 @@ How do we store memories? We don't store memories by keeping track of the exact 
 
 Notice the last two terms when computing the inner loops next hidden vector. This is just the scalar product of the earlier hidden state vector, h(\tau ), and the current hidden state vector, hs(t+ 1) in the inner loop. So you can think of each iteration as attending to the past hidden vectors in proportion to the similarity with the current inner loop hidden vector. 
 
+We do not use this method in our basic implementation because I wanted to explicitly show what the fast weights matrix looks like and having this "memory augmented" view does not really inhibit using minibatches (as you can see). But the problem an explicit fast weights matrix can create is the space issue, so using this efficient implementation will really help us out there.
+
 ### Execution
 
 - To see the advantage behind the fast weights, Ba et. al. used a very simple toy task.
