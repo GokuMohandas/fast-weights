@@ -146,7 +146,7 @@ class fast_weights_model(object):
         input_feed = {self.X: batch_X, self.y: batch_y, self.l:l, self.e:e}
 
         if not forward_only: # training
-            output_feed = [self.logits, self.loss, self.accuracy, self.norm,
+            output_feed = [self.loss, self.accuracy, self.norm,
             self.update]
         elif forward_only: # validation
             output_feed = [self.loss, self.accuracy]
@@ -155,7 +155,7 @@ class fast_weights_model(object):
         outputs = sess.run(output_feed, input_feed)
 
         if not forward_only:
-            return outputs[0], outputs[1], outputs[2], outputs[3], outputs[4]
+            return outputs[0], outputs[1], outputs[2], outputs[3]
         elif forward_only:
             return outputs[0], outputs[1]
 
