@@ -82,7 +82,7 @@ python train.py plot
 
 ### Extensions
 
-- I will be releasing my code comparing fast weights with an attention interface for language related sequence to sequence tasks. 
+- I will be releasing my code comparing fast weights with an attention interface for language related sequence to sequence tasks (in a sep repo).
 
 - It will also be interesting to compare the computational demands of fast weights compared to LSTM/GRUs and see which one is better for test time.
 
