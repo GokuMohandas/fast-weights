@@ -9,7 +9,7 @@ NIPS 2016, https://arxiv.org/abs/1610.06258
 
 How do we store memories? We don't store memories by keeping track of the exact neural activity that occurred at the time of the memory. Instead, we try to recreate the neural activity through a set of associative weights which can map to many other memories as well. This allows for efficient storage of many memories without storing separate weights for each instance. This associative network also allows for associative learning which is the ability to learn the recall the relationship between initially unrelated instances.(1)
 
-![ba](images/ba.png) (2)
+![ba](images/ba.png)
 
 ### Concept
 - In a traditional recurrent architecture we have our slow weights. These weights are used with the input and the previous hidden state to determine the next hidden state. These weights are responsible for the long-term knowledge of our systems. These weights are updated at the end of a batch, so they are quite slow to update and decay.
@@ -65,9 +65,8 @@ python train.py plot
 
 ### Citations
 
-1. http://www.apa.org/science/about/psa/2005/02/suzuki.aspx
-2. https://arxiv.org/abs/1610.06258
-3. http://www.fields.utoronto.ca/video-archive/event/2267
+1. Suzuki, Wendy A. "Associative Learning and the Hippocampus." APA. American Psychological Association, Feb. 2005. Web. 04 Dec. 2016.
+2. Hinton, Geoffrey. "FieldsLive Video Archive." Fields Institute for Research in Mathematical Sciences. University of Toronto, 13 Oct. 2016. Web. 04 Dec. 2016.
 
 ### Author
 Goku Mohandas (gokumd@gmail.com)
