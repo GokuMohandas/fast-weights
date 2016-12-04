@@ -30,6 +30,18 @@ How do we store memories? We don't store memories by keeping track of the exact 
 
 ![diagram.png](images/diagram1.png)
 
+### Efficient Implementation
+
+- If a neural net, we compute our fast weights matrix A by changing synapses but if we want to employ an efficient computer simulation, we need to utilize the fact that A will be <full rank matrix since number of time steps t < number of hidden units h. This means we might not need to calculate the fast weights matrix explicitly at all.
+
+![eq2](images/eq2.png)
+
+- We can rewrite A by recursively applying it (assuming A=0 @ beginning of seq.). This also allows us to compute the third component required for the inner loop's hidden state vector. We do not need to explicitly compute the fast weights matrix A at any point! The real advantage here is that now we do not have to store a fast weights matrix for each sequence in the minibatch, which becomes a major space issue for forward/back prop on multiple sequences in the minibatch. Now, we just have to keep track of the previous hidden states (one row each time step). 
+
+![eq3](images/eq3.png)
+
+Notice the last two terms when computing the inner loops next hidden vector. This is just the scalar product of the earlier hidden state vector, h(? ), and the current hidden state vector, hs(t+ 1) in the inner loop. So you can think of each iteration as attending to the past hidden vectors in proportion to the similarity with the current inner loop hidden vector. 
+
 ### Execution
 
 - To see the advantage behind the fast weights, Ba et. al. used a very simple toy task.

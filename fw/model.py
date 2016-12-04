@@ -65,7 +65,7 @@ class fast_weights_model(object):
         # Process batch by time-major
         for t in range(0, FLAGS.input_dim):
 
-            # hidden state
+            # hidden state (preliminary vector)
             self.h = tf.nn.relu((tf.matmul(self.X[:, t, :], self.W_x)+self.b_x) +
                 (tf.matmul(self.h, self.W_h)))
 
