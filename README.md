@@ -46,6 +46,9 @@ We do not use this method in our basic implementation because I wanted to explic
 
 Note that this 'efficient implementation' will be costly if our sequence length is greater than the hidden state dimensionality. The computations will scale quadratically now because since we need to attend to all previous hidden states with the current inner loop's hidden representation.
 
+### Requirements
+* tensorflow (>0.10)
+
 ### Execution
 
 - To see the advantage behind the fast weights, Ba et. al. used a very simple toy task.
