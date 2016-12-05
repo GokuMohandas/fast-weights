@@ -74,8 +74,8 @@ python train.py plot
 ### Results
 
 - Control: RNN without layer normalization (LN) or fast weights (FW)
-![results1](fw/loss.png)
-![results2](fw/accuracy.png)
+![results1](images/loss.png)
+![results2](images/accuracy.png)
 
 ### Bag of Tricks
 
