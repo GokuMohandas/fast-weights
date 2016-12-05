@@ -53,6 +53,11 @@ Note that this 'efficient implementation' will be costly if our sequence length 
 Given: g1o2k3??g we need to predict 1. 
 - You can think of each letter-number pair as a key/value pair. We are given a key at the end and we need to predict the appropriate value. The fast associative memory is required here in order to keep track of the key/value pairs it has just seen and retrieve the proper value given a key. After backpropagation, the fast memory will give us a hidden state vector, for example after g and 1, with a part for g and another part for 1 and learn to associate the two together.
 
+- Create datasets:
+```bash
+python data_utils.py
+```
+
 - For training:
 ```bash
 python train.py train <model_name: RNN-LN-FW | RNN-LN | CONTROL | GRU-LN >
