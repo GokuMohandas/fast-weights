@@ -7,7 +7,9 @@ NIPS 2016, https://arxiv.org/abs/1610.06258
 
 More details @ https://theneuralperspective.com/2016/12/04/implementation-of-using-fast-weights-to-attend-to-the-recent-past/
 
-Use fast weights to aid in learning associative tasks and store temporary memories of recent past. In a traditional recurrent architecture we have our slow weights which are used to determine the next hidden state and hold long-term memory. We introduce the concept of fast weights, in conjunction with the slow weights, in order to account for short-term knowledge. These weights are quick to update and decay as they change from the introduction of new hidden states. 
+Use fast weights to aid in learning associative tasks and store temporary memories of recent past. In a traditional recurrent architecture we have our slow weights which are used to determine the next hidden state and hold long-term memory. We introduce the concept of fast weights, in conjunction with the slow weights, in order to account for short-term knowledge. These weights are quick to update and decay as they change from the introduction of new hidden states.
+
+The overall task of the fast weights is to quickly be able to adjust to recent hidden states while remembering the recent past. You use the fast weights to determine the final hidden state at each time step. Though BPTT does not directly change our fast weights (these fast weights A are unique for each sample actually), our fast weights do affect the hidden states whose weights (slow) do get affected by what the fast weights do. So with training, we affect our slow weights (Wh and Wx) which intern affects how our fast weights are determined. Eventually, they will be determined as to keep track of the recent past so we can create hidden states that lead to the correct answer.
 
 ### Physiological Motivations
 
