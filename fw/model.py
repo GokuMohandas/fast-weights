@@ -90,9 +90,9 @@ class fast_weights_model(object):
                         tf.batch_matmul(self.h_s, self.A)
 
                     # Apply layernorm
-                    mu = tf.reduce_mean(self.h_s, reduction_indices=0) # each sample
+                    mu = tf.reduce_mean(self.h_s, reduction_indices=2) # each sample
                     sigma = tf.sqrt(tf.reduce_mean(tf.square(self.h_s - mu),
-                        reduction_indices=0))
+                        reduction_indices=2))
                     self.h_s = tf.div(tf.mul(self.gain, (self.h_s - mu)), sigma) + \
                         self.bias
 
